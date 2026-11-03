@@ -1,0 +1,503 @@
+:root {
+  --color-white: rgba(255, 255, 255);
+  --color-blue: rgba(70, 150, 255);
+  --color-purple: rgba(231, 111, 255);
+  --color-black: rgba(0, 0, 0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+  margin: 0;
+  padding: 0;
+  color: var(--color-white);
+}
+h3 {
+  font-size: 16px;
+  font-family: Helvetica;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+h1 {
+  font-size: 128px;
+  font-family: Lato;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+p,
+a {
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+h2 {
+  font-size: 48px;
+  font-family: Lato;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  position: relative;
+  height: 1016px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  align-self: stretch;
+  background: linear-gradient(180deg, #000 66.35%, #666 100%);
+  height: 120vh;
+}
+
+.hero .titles {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero .titles .text {
+  display: flex;
+  gap: 5px;
+}
+
+.text .so {
+  color: var(--color-purple);
+}
+
+.text .imatge {
+  color: var(--color-blue);
+}
+
+.text .producció {
+  color: var(--color-black);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--White, #fff);
+}
+
+.contact {
+  z-index: 1;
+  display: flex;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  background: rgba(139, 139, 139);
+  transition: all 0.3s;
+}
+
+.contact:hover {
+  border-radius: 25px;
+  background: var(--color-white);
+}
+
+.contact:hover a {
+  color: var(--color-black);
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  align-self: stretch;
+}
+
+.catchfrase {
+  display: flex;
+  height: 1024px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 300px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #c0c0c0 0%, #000 97.6%);
+}
+
+.phrase1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
+
+.typo-change {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+}
+
+.typo-change h3 {
+  height: 50px;
+}
+
+.experiència {
+  display: flex;
+  padding: 50px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 121px;
+  background: linear-gradient(180deg, #000 0%, #3d3d3d 50%, #000 100%);
+}
+
+.title {
+  display: flex;
+  padding: 0 50px;
+  flex-direction: column;
+  width: calc(100% - 50px);
+}
+
+.interactive {
+  display: flex;
+  align-items: center;
+  gap: 73px;
+}
+
+.overlay_guió,
+.overlay_producció,
+.overlay_so,
+.overlay_imatge {
+  display: flex;
+  width: 264px;
+  padding: 25px;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
+  border-radius: 10px;
+  background: #fff;
+  position: fixed; /* Fixat (com al figma) */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Amagat fins que hi prems */
+  z-index: 10; /* Per sobre de la resta */
+}
+
+.overlay_guió p,
+.overlay_guió h3,
+.overlay_producció p,
+.overlay_producció h3,
+.overlay_so p,
+.overlay_so h3,
+.overlay_imatge p,
+.overlay_imatge h3 {
+  color: var(--color-black);
+}
+
+.overlay_guió i,
+.overlay_producció i,
+.overlay_so i,
+.overlay_imatge i {
+  color: var(--color-black);
+  font-size: 81px;
+}
+
+.overlay_guió.is-visible,
+.overlay_producció.is-visible,
+.overlay_so.is-visible,
+.overlay_imatge.is-visible {
+  display: flex;
+}
+
+.overlay-close {
+  align-self: flex-end;
+  border: 0;
+  background: transparent;
+  color: var(--color-black);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.column1 {
+  display: flex;
+  align-items: center;
+  gap: -8px;
+  transition: transform 0.3s ease;
+}
+
+.column1:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.column2 {
+  display: flex;
+  width: 172px;
+  flex-direction: column;
+  align-items: center;
+  gap: 231px;
+}
+
+.column2 .producció {
+  display: flex;
+  align-items: center;
+  gap: -8px;
+  transition: transform 0.3s ease;
+}
+
+.column2 .producció:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.column2 .imatge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: -8px;
+  transition: transform 0.3s ease;
+}
+
+.column2 .imatge:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.column3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: -8px;
+  transition: transform 0.3s ease;
+}
+
+.column3:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.works {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  background: var(--color-black);
+}
+
+.work1,
+.work2 {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 45px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 100vh;
+}
+
+.container_desktop {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 190px;
+  padding: 70px;
+  border-radius: 19px;
+  border: 52px solid transparent;
+  background: black border-box;
+  flex-basis: auto;
+
+  position: relative;
+  isolation: isolate;
+}
+
+.work1 .container_desktop::before {
+  content: "";
+  position: absolute;
+  top: -52px;
+  right: -52px;
+  bottom: -52px;
+  left: -52px;
+  border-radius: inherit;
+  padding: 52px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(231, 111, 255) 0%,
+    black 6%,
+    black 97%,
+    rgba(231, 111, 255) 100%
+  );
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+
+  z-index: -1;
+}
+
+/* Hover */
+.work1:hover .container_desktop::before {
+  opacity: 1;
+}
+
+.work2 .container_desktop::before {
+  content: "";
+  position: absolute;
+  top: -52px;
+  right: -52px;
+  bottom: -52px;
+  left: -52px;
+  border-radius: inherit;
+  padding: 52px;
+
+  background: linear-gradient(
+    180deg,
+    var(--color-white) 0%,
+    black 6%,
+    black 97%,
+    var(--color-white) 100%
+  );
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+
+  z-index: -1;
+}
+
+/* Hover */
+.work2:hover .container_desktop::before {
+  opacity: 1;
+}
+
+.container_desktop .column1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  flex-basis: auto;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.final-product {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-self: stretch;
+  width: 100%;
+
+  padding: 50px 0 0 0;
+}
+
+.container_desktop .column2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0;
+
+  flex-basis: auto;
+  height: auto;
+}
+
+.container_desktop img {
+  display: block;
+  max-width: 70vw;
+  width: auto;
+  height: 100%;
+}
+
+.column1 h3 {
+  padding: 50px 0 0 0;
+}
+
+.footer {
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: linear-gradient(180deg, #000 0%, #000 50%, #7a7a7a 99.99%);
+}
+
+.footer .imatge {
+  width: calc(100% + 100px);
+  margin-left: -50px;
+}
+
+.footer .imatge img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.footer .info {
+  padding: 50px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+  text-align: right;
+}
+
+.logos {
+  display: flex;
+  gap: 10px;
+  font-size: 40px;
+}
+
+.logos i,
+.info p {
+  color: var(--color-white);
+  transition: all 0.3s;
+}
+
+.logos i:hover,
+.info p:hover {
+  color: var(--color-black);
+}
+
+@media (max-width: 1000px) {
+  .work1,
+  .work2 {
+    height: auto;
+  }
+
+  .container_desktop {
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+    border-width: 20px;
+    height: auto;
+  }
+
+  .column1,
+  .column2 {
+    width: 100%;
+  }
+}
