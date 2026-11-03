@@ -490,6 +490,27 @@ h2 {
   color: var(--color-black);
 }
 
+.up {
+  z-index: 1;
+  display: flex;
+  padding: 25px;
+  margin: -100px 0 0 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  background: rgba(139, 139, 139);
+  transition: all 0.3s;
+}
+
+.up:hover {
+  border-radius: 25px;
+  background: var(--color-white);
+}
+
+.up:hover p {
+  color: var(--color-black);
+}
 @media (max-width: 1000px) {
   .work1,
   .work2 {
@@ -518,5 +539,9 @@ h2 {
   .column1,
   .column2 {
     width: 100%;
+  }
+
+  .up {
+    margin: 20px 0 0 0;
   }
 }
