@@ -72,6 +72,11 @@ h2 {
   height: 120vh;
 }
 
+.titles img {
+  max-width: 90vw;
+  height: auto;
+}
+
 .hero .titles {
   display: flex;
   position: relative;
@@ -192,7 +197,7 @@ h2 {
   align-items: center;
   gap: 21px;
   border-radius: 10px;
-  background: #fff;
+  background: var(--color-white);
   position: fixed; /* Fixat (com al figma) */
   top: 50%;
   left: 50%;
@@ -236,19 +241,19 @@ h2 {
   font-size: 24px;
 }
 
-.column1 {
+.interactive .column1 {
   display: flex;
   align-items: center;
   gap: -8px;
   transition: transform 0.3s ease;
 }
 
-.column1:hover {
+.interactive .column1:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 
-.column2 {
+.interactive .column2 {
   display: flex;
   width: 172px;
   flex-direction: column;
@@ -481,7 +486,7 @@ h2 {
 }
 
 .logos i:hover,
-.info p:hover {
+.footer .info p:hover {
   color: var(--color-black);
 }
 
@@ -491,12 +496,23 @@ h2 {
     height: auto;
   }
 
+  h1 {
+    font-size: 50px;
+  }
+
+  .interactive {
+    gap: 0px;
+  }
   .container_desktop {
     flex-direction: column;
     gap: 40px;
-    padding: 30px;
     border-width: 20px;
     height: auto;
+  }
+
+  iframe {
+    height: 100%;
+    width: 100%;
   }
 
   .column1,
